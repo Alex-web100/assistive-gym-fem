@@ -50,6 +50,12 @@ git clone https://github.com/Healthcare-Robotics/assistive-gym.git
 cd assistive-gym
 pip3 install -e .
 ```
+### SLP-3DFits installation for varied joint poses
+In order to apply varied body poses from the SLP dataset, please follow the installation instructions for [SLP-3DFits](https://github.com/pgrady3/SLP-3Dfits). Move the 'fits' folder into your local 'bodies-uncovered' directory, and change the fits_path in the file human.py:
+``` def apply_slp_joints(self,np_random):
+#Need to edit to lead to your own 'fits' folder
+fits_path="/.../bodies-uncovered/fits"
+```
 
 ## Getting Started
 We provide a [10 Minute Getting Started Guide](https://github.com/Healthcare-Robotics/assistive-gym/wiki/3.-Getting-Started) to help you get familiar with using Assistive Gym for assistive robotics research.
